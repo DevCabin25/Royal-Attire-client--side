@@ -4,6 +4,7 @@ const App = () => {
   return (
     <div>
       <h1 className='text-red-600 font-bold'>this is our new website </h1>
+      
     </div>
   );
 };
