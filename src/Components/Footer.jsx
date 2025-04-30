@@ -7,7 +7,7 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
 
                 <div>
-                    <h2 className="text-2xl font-bold mb-4">FashionHub</h2>
+                    <h2 className="text-2xl font-bold mb-4">Royal Attire!</h2>
                     <p className="text-gray-400">
                         Elevate your style with the latest trends and timeless designs. Fashion for every moment.
                     </p>
