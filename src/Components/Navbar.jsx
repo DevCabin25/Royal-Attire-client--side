@@ -7,8 +7,8 @@ const Navbar = () => {
   const navLinks = ["Home", "Store", "Guide", "About", "Contact"];
 
   return (
-    <nav className="bg-white shadow-sm fixed w-full z-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="bg-white shadow-sm fixed w-full ">
+      <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <div className="text-2xl font-bold text-black"><img className="w-20" src={logo} alt="" /></div>
