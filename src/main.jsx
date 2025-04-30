@@ -11,16 +11,15 @@ import Home from './Page/Home.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
-    element:<Root/>,
-    children:[{
-         path:"/",
-         element:<Home/>
+    element: <Root />,
+    children: [{
+      path: "/",
+      element: <Home />
     }]
-    
-  },
+  }
 ]);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-       <RouterProvider router={router} />
+    <RouterProvider router={router} />
   </StrictMode>,
 )
