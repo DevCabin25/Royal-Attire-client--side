@@ -12,6 +12,7 @@ import img2 from '../../assets/2.svg'
 const Banner = () => {
     return (
         <div>
+
             <Swiper
         spaceBetween={30}
         effect={'fade'}
@@ -41,7 +42,14 @@ const Banner = () => {
         <img src={img2} alt="" />
         </SwiperSlide>
       </Swiper>
+
+            
+        
+            
+
         </div>
+        
+        
     );
 };
 
