@@ -7,7 +7,7 @@ const Navbar = () => {
   const navLinks = ["Home", "Store", "Guide", "About", "Contact"];
 
   return (
-    <nav className="bg-white shadow-sm fixed w-full ">
+    <nav className="bg-white shadow-sm fixed z-20 w-full ">
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}

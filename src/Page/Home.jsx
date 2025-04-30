@@ -6,7 +6,10 @@ const Home = () => {
     return (
         <div>
            <Banner/>
+
+
            <About></About>
+
         </div>
     );
 };

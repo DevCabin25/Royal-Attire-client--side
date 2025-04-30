@@ -10,7 +10,7 @@ const Root = () => {
             <header>
             <Navbar/>
             </header>
-         <section className='min-h-screen '>
+         <section className='min-h-screen pt-20 '>
          <Outlet/>
          </section>
 
