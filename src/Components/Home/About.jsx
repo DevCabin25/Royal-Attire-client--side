@@ -35,7 +35,17 @@ const About = () => {
           </div>
         </div>
 
-        
+        {/* Unique Design Elements */}
+        <div className="relative mt-16 bg-gray-100 py-12 px-6 rounded-xl shadow-xl">
+          <h3 className="text-3xl font-serif font-bold text-gray-900 text-center mb-6">
+            Heritage Meets the Future
+          </h3>
+          <p className="text-lg text-gray-700 text-center leading-relaxed max-w-2xl mx-auto">
+            Our collections blend the finest fabrics and timeless designs with modern innovation, making sure every piece tells a story of luxury, craftsmanship, and unparalleled style.
+          </p>
+          <div className="absolute top-0 right-3 w-20 h-20 bg-black rounded-full transform rotate-45 translate-x-8 translate-y-8 opacity-25"></div>
+          <div className="absolute bottom-0 left-0 w-20 h-20 bg-black rounded-full transform -rotate-45 translate-x-8 translate-y-8 opacity-25"></div>
+        </div>
       </div>
     </section>
   
