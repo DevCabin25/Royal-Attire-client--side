@@ -7,7 +7,7 @@ const FeaturedCollections = () => {
         <h2 className="text-4xl font-bold text-gray-900 mb-8">
           Explore Our Collections
         </h2>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 mx-4 gap-8">
           <div className="collection-card bg-gray-100 p-6 rounded-lg shadow-lg hover:bg-black hover:text-white transition-all duration-300">
             <h3 className="text-xl font-semibold">Formal Majesty</h3>
           </div>
