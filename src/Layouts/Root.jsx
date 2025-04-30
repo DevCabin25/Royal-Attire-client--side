@@ -10,7 +10,7 @@ const Root = () => {
          <section className='min-h-screen'>
          <Outlet/>
          </section>
-            <Footer/>
+          <Footer/>
         </div>
     );
 };
