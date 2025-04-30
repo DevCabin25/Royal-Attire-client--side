@@ -1,5 +1,5 @@
 import React from "react";
-
+import img1 from '../../assets/ChatGPT Image May 1, 2025, 01_01_41 AM.png'
 const About = () => {
   return (
     <section className="py-20 bg-white text-black">
@@ -26,7 +26,7 @@ const About = () => {
           <div className="w-full md:w-1/2 flex justify-center">
             <div className="relative w-80 h-96">
               <img
-                src="https://via.placeholder.com/400x500"
+                src={img1}
                 alt="Royal Attire"
                 className="object-cover w-full h-full rounded-lg shadow-xl"
               />
