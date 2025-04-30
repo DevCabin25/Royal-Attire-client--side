@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 
 const Navbar = () => {
@@ -64,6 +65,7 @@ const Navbar = () => {
         </div>
       )}
     </nav>
+
   );
 };
 
