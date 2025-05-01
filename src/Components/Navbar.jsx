@@ -9,6 +9,8 @@ const Navbar = () => {
   const links =<>
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}>Home</NavLink>
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/store'}>Store</NavLink>
+  <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}> Fashion Guide</NavLink>
+  <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}>Contact </NavLink>
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}>About Us</NavLink>
   </>
   return (
@@ -45,15 +47,8 @@ const Navbar = () => {
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
         <div className="md:hidden bg-white shadow-md px-4 py-3 space-y-2">
-          {navLinks.map((link) => (
-            <a
-              key={link}
-              href="#"
-              className="block text-black hover:text-gray-700 font-medium"
-            >
-              {link}
-            </a>
-          ))}
+          
+          {links}
           <a
             href="#"
             className="block mt-2 px-4 py-2 text-center rounded-md bg-black text-white hover:bg-gray-800 transition"
