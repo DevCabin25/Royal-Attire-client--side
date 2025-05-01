@@ -1,11 +1,16 @@
 
 import React, { useState } from "react";
 import logo from '../assets/logo.png'
+import { NavLink } from "react-router-dom";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const navLinks = ["Home", "Store", "Guide", "About", "Contact"];
-
+  
+  const links =<>
+  <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}>Home</NavLink>
+  <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/store'}>Store</NavLink>
+  <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}>About Us</NavLink>
+  </>
   return (
     <nav className="bg-white shadow-sm fixed z-20 w-full ">
       <div className=" mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,15 +20,8 @@ const Navbar = () => {
 
           {/* Desktop Nav */}
           <div className="hidden md:flex space-x-6 items-center">
-            {navLinks.map((link) => (
-              <a
-                key={link}
-                href="#"
-                className="text-black hover:text-gray-600 font-medium"
-              >
-                {link}
-              </a>
-            ))}
+            
+              {links}
             <a
               href="#"
               className="ml-4 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800 transition"

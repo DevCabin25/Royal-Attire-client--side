@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import Root from './Layouts/Root.jsx';
 import Home from './Page/Home.jsx';
+import Store from './Page/Store.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,7 +16,11 @@ const router = createBrowserRouter([
     children: [{
       path: "/",
       element: <Home />
-    }]
+    },
+  {
+    path:"/store",
+    element:<Store/>
+  }]
   }
 ]);
 createRoot(document.getElementById('root')).render(
