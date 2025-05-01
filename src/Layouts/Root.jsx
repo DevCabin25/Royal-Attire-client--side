@@ -7,14 +7,14 @@ const Root = () => {
     return (
 
         <div>
-            <header>
-            <Navbar/>
+            <header >
+                <Navbar />
             </header>
-         <section className='min-h-screen pt-20 '>
-         <Outlet/>
-         </section>
+            <section className='min-h-screen pt-20 '>
+                <Outlet />
+            </section>
 
-            <Footer/>
+            <Footer />
 
 
         </div>

@@ -12,6 +12,7 @@ const Navbar = () => {
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}> Fashion Guide</NavLink>
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}>Contact </NavLink>
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}>About Us</NavLink>
+  <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/contact'}>Contact</NavLink>
   </>
   return (
     <nav className="bg-white shadow-sm fixed z-20 w-full ">

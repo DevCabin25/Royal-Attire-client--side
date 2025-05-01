@@ -9,6 +9,9 @@ import {
 import Root from './Layouts/Root.jsx';
 import Home from './Page/Home.jsx';
 import Store from './Page/Store.jsx';
+import About from './Components/Home/About.jsx';
+// import ContactUs from './Page/ContactUs.jsx';
+import Contact from './Page/Contact.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -20,6 +23,10 @@ const router = createBrowserRouter([
   {
     path:"/store",
     element:<Store/>
+  },
+  {
+    path:"/contact",
+    element:<Contact/>
   }]
   }
 ]);
