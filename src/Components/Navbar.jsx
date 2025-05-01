@@ -10,7 +10,7 @@ const Navbar = () => {
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}>Home</NavLink>
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/store'}>Store</NavLink>
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}> Fashion Guide</NavLink>
-  <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}>Contact </NavLink>
+
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}>About Us</NavLink>
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/contact'}>Contact</NavLink>
   </>
