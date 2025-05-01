@@ -8,6 +8,8 @@ import {Autoplay, EffectFade, Navigation, Pagination } from 'swiper/modules';
 
 import img1 from '../../assets/1.svg'
 import img2 from '../../assets/2.svg'
+import men1 from '../../assets/men1.jpg'
+import BannerImg from './BannerImg/BannerImg';
 
 const Banner = () => {
     return (
@@ -28,18 +30,18 @@ const Banner = () => {
         className="mySwiper"
       >
         <SwiperSlide className=''>
-            <img src={img1} alt="" />
+            <img className='' src={img1} alt="" />
         
         </SwiperSlide>
         <SwiperSlide>
-            <img src={img2} alt="" />
+            <img className='' src={img2} alt="" />
         
         </SwiperSlide>
         <SwiperSlide>
-        <img src={img1} alt="" />
+        <BannerImg title={'Refined Fashion for the Modern Man'} subtitle={'Sophisticated outfits for every occasion'}  buttonText={'Shop the Look'} buttonLink={'/store'} img={men1} />
         </SwiperSlide>
         <SwiperSlide>
-        <img src={img2} alt="" />
+        <img className='' src={img2} alt="" />
         </SwiperSlide>
       </Swiper>
 
