@@ -12,6 +12,7 @@ import Store from './Page/Store.jsx';
 import About from './Components/Home/About.jsx';
 // import ContactUs from './Page/ContactUs.jsx';
 import Contact from './Page/Contact.jsx';
+import AboutUs from './Page/AboutUs.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -27,7 +28,12 @@ const router = createBrowserRouter([
   {
     path:"/contact",
     element:<Contact/>
-  }]
+  },
+  {
+    path:"/aboutUs",
+    element:<AboutUs/>
+  }
+]
   }
 ]);
 createRoot(document.getElementById('root')).render(
