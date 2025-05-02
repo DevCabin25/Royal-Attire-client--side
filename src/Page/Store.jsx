@@ -29,9 +29,9 @@ const Store = () => {
   return (
     <div className="bg-white text-black min-h-screen">
       {/* Banner */}
-      <div className="w-full h-64 bg-cover bg-center mb-8" style={{ backgroundImage: "url('/images/banner.jpg')" }}>
-        <div className="bg-black bg-opacity-50 h-full flex items-center justify-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-white">Elevate Your Style</h1>
+      <div className="w-full h-64 bg-cover bg-center mb-8" style={{ backgroundImage: "url('https://i.ibb.co.com/qQb5hXm/young-successful-businessman-looking-camera.jpg')" }}>
+        <div className="bg-black bg-opacity-80 h-full flex items-center justify-center">
+          <h1 className="text-4xl font-serif md:text-5xl font-bold text-white">Elevate Your Style</h1>
         </div>
       </div>
 
