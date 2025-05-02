@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 const categories = [
   { name: "All", image: "" },
-  { name: "Suits", image: "/images/categories/suits.jpg" },
-  { name: "Shirts", image: "/images/categories/shirts.jpg" },
-  { name: "Trousers", image: "/images/categories/trousers.jpg" },
-  { name: "Accessories", image: "/images/categories/accessories.jpg" }
+  { name: "Formal Wear", image: "https://i.ibb.co.com/sJt4Ss8R/smiling-young-male-professional-standing-with-arms-crossed-while-making-eye-contact-against-isolated.jpg" },
+  { name: "Casual Classics", image: "https://i.ibb.co.com/0R9k6MyX/young-joyful-student-man-holding-thumb-up-isolated.jpg" },
+  { name: "Partywear ", image: "https://i.ibb.co.com/RpSsHFHP/Chat-GPT-Image-May-2-2025-09-33-18-PM.png" },
+  { name: "Accessories", image: "https://i.ibb.co.com/ksc2wK7S/Chat-GPT-Image-May-2-2025-09-35-55-PM.png" }
 ];
 
 const products = [
@@ -37,28 +37,29 @@ const Store = () => {
 
       <div className="px-6">
         {/* Category Filter with Images */}
-        <div className="flex flex-wrap justify-center gap-4 mb-8">
-          {categories.map((cat) => (
-            <div
-              key={cat.name}
-              onClick={() => setSelectedCategory(cat.name)}
-              className={`relative w-32 h-20 rounded-lg overflow-hidden cursor-pointer border-2 transition duration-300 ${
-                selectedCategory === cat.name ? "border-black" : "border-transparent hover:border-gray-400"
-              }`}
-            >
-              {cat.image && (
-                <img
-                  src={cat.image}
-                  alt={cat.name}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-              )}
-              <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                <span className="text-white font-semibold text-sm">{cat.name}</span>
-              </div>
-            </div>
-          ))}
-        </div>
+        <div className="flex flex-wrap justify-center gap-6 mb-8">
+  {categories.map((cat) => (
+    <div
+      key={cat.name}
+      onClick={() => setSelectedCategory(cat.name)}
+      className={`relative w-40 h-28 rounded-lg overflow-hidden cursor-pointer transition-all duration-300 transform hover:scale-105 ${
+        selectedCategory === cat.name ? "border-4 border-black shadow-lg" : "border-2 border-transparent hover:border-gray-400 hover:shadow-md"
+      }`}
+    >
+      {cat.image && (
+        <img
+          src={cat.image}
+          alt={cat.name}
+          className="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 hover:opacity-80"
+        />
+      )}
+      <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <span className="text-white font-bold text-lg sm:text-xl">{cat.name}</span>
+      </div>
+    </div>
+  ))}
+</div>
+
 
         {/* Search */}
         <div className="flex justify-center mb-8">
