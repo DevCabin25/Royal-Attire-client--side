@@ -63,29 +63,57 @@ const Store = () => {
 
         {/* Search */}
         <div className="flex justify-center mb-8">
-          <input
-            type="text"
-            placeholder="Search elegant fashion..."
-            className="border border-black px-4 py-2 w-full max-w-md rounded-md focus:outline-none focus:ring-2 focus:ring-black"
-            value={searchQuery}
-            onChange={(e) => setSearchQuery(e.target.value)}
-          />
-        </div>
+  <div className="relative w-full max-w-md">
+    <input
+      type="text"
+      placeholder="Search elegant fashion..."
+      className="border border-black px-4 py-2 w-full rounded-md focus:outline-none focus:ring-2 focus:ring-black pl-10"
+      value={searchQuery}
+      onChange={(e) => setSearchQuery(e.target.value)}
+    />
+    <svg
+      className="absolute left-3 top-1/2 transform -translate-y-1/2 text-black"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      width="20"
+      height="20"
+    >
+      <circle cx="11" cy="11" r="8" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+  </div>
+</div>
+
 
         {/* Product Grid */}
         <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-          {filteredProducts.map((product) => (
-            <div
-              key={product.id}
-              className="border border-black rounded-lg p-4 hover:shadow-lg transition duration-300"
-            >
-              <div className="h-40 bg-gray-100 mb-4 rounded"></div>
-              <h2 className="text-lg font-semibold mb-1">{product.name}</h2>
-              <p className="text-sm text-gray-700">{product.category}</p>
-              <p className="mt-2 font-medium">{product.price}</p>
-            </div>
-          ))}
-        </div>
+  {filteredProducts.map((product) => (
+    <div
+      key={product.id}
+      className="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-all duration-300"
+    >
+      <div className="h-40 bg-gray-100 mb-4 rounded-lg overflow-hidden">
+        {/* Add product image here if available */}
+      </div>
+      <h2 className="text-lg font-semibold mb-2 text-gray-900">{product.name}</h2>
+      <p className="text-sm text-gray-600">{product.category}</p>
+      <p className="mt-2 font-medium text-gray-900">{product.price}</p>
+
+      <button
+        className="mt-4 w-full py-2 bg-black text-white rounded-md hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-black"
+        
+      >
+        Add to Cart
+      </button>
+    </div>
+  ))}
+</div>
+
       </div>
     </div>
   );
