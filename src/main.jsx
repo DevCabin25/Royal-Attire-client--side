@@ -13,6 +13,7 @@ import About from './Components/Home/About.jsx';
 // import ContactUs from './Page/ContactUs.jsx';
 import Contact from './Page/Contact.jsx';
 import AboutUs from './Page/AboutUs.jsx';
+import Register from './Page/Auth/Register.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path:"/store",
     element:<Store/>
+  },
+  {
+    path:"/sign-up",
+    element:<Register/>
   },
   {
     path:"/contact",
