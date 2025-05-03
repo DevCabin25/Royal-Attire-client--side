@@ -13,6 +13,7 @@ import About from './Components/Home/About.jsx';
 // import ContactUs from './Page/ContactUs.jsx';
 import Contact from './Page/Contact.jsx';
 import AboutUs from './Page/AboutUs.jsx';
+import Login from './Page/Auth/Login.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path:"/aboutUs",
     element:<AboutUs/>
+  },
+  {
+    path:"/login",
+    element:<Login/>
   }
 ]
   }
