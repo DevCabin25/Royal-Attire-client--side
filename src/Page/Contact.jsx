@@ -11,13 +11,13 @@ const Contact = () => {
 
 				<div className='relative bg-white rounded-xl mt-4 w-[60%] p-4'>
 					<img className='h-32 mx-auto ' src={logo} alt="" />
-					<p className='absolute -top-11 right-[610px] w-20 h-20 bg-black rounded-full transform rotate-45 translate-x-8 translate-y-8 opacity-50'></p>
+					<p className='absolute -top-11 right-[620px] w-16 h-16 bg-black rounded-full transform rotate-45 translate-x-8 translate-y-8 opacity-50'></p>
 					<p className='text-justify'>Royal Attire is your ultimate online destination for premium fashion. Blending elegance with modern trends, we offer a curated collection of royal-inspired clothing and accessories for all.At Royal Attire, we believe fashion is more than just clothing — it’s a statement. Our store brings you a handpicked range of luxurious, stylish, and comfortable apparel that lets you express your royal self with pride.</p>
 				</div>
 				<div className=' relative text-center text-xl mt-4 w-[50%] mx-auto flex justify-center items-center bg-white rounded-xl'>
 					<div className=''>
 						
-						<p className='absolute top-44 left-[440px]	 w-20 h-20 bg-black rounded-full transform rotate-45 translate-x-8 translate-y-8 opacity-50'></p>
+						<p className='absolute top-48 left-[450px]	 w-16 h-16 bg-black rounded-full transform rotate-45 translate-x-8 translate-y-8 opacity-50'></p>
 						<h1 className='text-3xl text-center'>Meet With Us</h1>
 						<h1 className='text-2xl font-semibold mt-10'>DevCabin</h1>
 						<p className='text-'>32/3,Banasree,Rampura,Dhaka</p>
@@ -73,6 +73,8 @@ const Contact = () => {
 		<button type="submit" className="w-full p-3 text-sm font-bold text-white bg-black tracking-wide uppercase rounded">Send Message</button>
 	</form>
 </div>
+
+
 
 
 		</div>
