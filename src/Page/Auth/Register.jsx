@@ -1,5 +1,6 @@
 import React from "react";
 import logo from '../../assets/logo.png'
+import { Link } from "react-router-dom";
 
 const Register = () => {
     return (
@@ -155,12 +156,12 @@ const Register = () => {
                     </button>
 
                     <div className="mt-6 text-center">
-                        <a
-                            href="#"
+                        <Link
+                            to="/login"
                             className="text-sm text-black hover:underline dark:text-blue-400"
                         >
                             Already have an account?
-                        </a>
+                        </Link>
                     </div>
                 </div>
             </form>
