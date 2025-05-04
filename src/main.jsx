@@ -12,10 +12,10 @@ import Store from './Page/Store.jsx';
 import About from './Components/Home/About.jsx';
 // import ContactUs from './Page/ContactUs.jsx';
 import Contact from './Page/Contact.jsx';
-import AboutUs from './Page/AboutUs.js
 import Register from './Page/Auth/Register.jsx';
 
 import Login from './Page/Auth/Login.jsx';
+import AboutUs from './Page/AboutUs';
 const router = createBrowserRouter([
   {
     path: "/",

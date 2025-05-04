@@ -1,7 +1,7 @@
 
 import React, { useState } from "react";
 import logo from '../assets/logo.png'
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -11,8 +11,8 @@ const Navbar = () => {
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/store'}>Store</NavLink>
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}> Fashion Guide</NavLink>
 
-  <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}>About Us</NavLink>
-  <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/sign-up'}>Sign Up</NavLink>
+  <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/aboutUs'}>About Us</NavLink>
+ 
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/contact'}>Contact</NavLink>
   </>
   return (
@@ -51,12 +51,12 @@ const Navbar = () => {
         <div className="md:hidden bg-white shadow-md px-4 py-3 space-y-2">
           
           {links}
-          <a
-            href="#"
+          <Link
+            to="/sign-up"
             className="block mt-2 px-4 py-2 text-center rounded-md bg-black text-white hover:bg-gray-800 transition"
           >
             Buy Now
-          </a>
+          </Link>
         </div>
       )}
     </nav>
