@@ -9,7 +9,7 @@ const Navbar = () => {
   const links =<>
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}>Home</NavLink>
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/store'}>Store</NavLink>
-  <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}> Fashion Guide</NavLink>
+  <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/guide'}> Fashion Guide</NavLink>
 
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/aboutUs'}>About Us</NavLink>
  
@@ -48,7 +48,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white shadow-md px-4 py-3 space-y-2">
+        <div className="md:hidden flex flex-col gap-4 bg-white shadow-md px-4 py-3 space-y-2">
           
           {links}
           <Link
