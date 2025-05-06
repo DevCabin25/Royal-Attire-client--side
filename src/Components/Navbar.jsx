@@ -26,12 +26,12 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-6 items-center">
             
               {links}
-            <a
-              href="#"
-              className="ml-4 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800 transition"
-            >
-              Buy Now
-            </a>
+              <Link
+            to="/sign-up"
+            className="block mt-2 px-4 py-2 text-center rounded-md bg-black text-white hover:bg-gray-800 transition"
+          >
+            Buy Now
+          </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
