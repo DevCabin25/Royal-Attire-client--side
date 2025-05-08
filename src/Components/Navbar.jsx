@@ -9,7 +9,7 @@ const Navbar = () => {
   const links =<>
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}>Home</NavLink>
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/store'}>Store</NavLink>
-  <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/'}> Fashion Guide</NavLink>
+  <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/guide'}> Fashion Guide</NavLink>
 
   <NavLink className={'text-black hover:text-gray-600 font-medium'} to={'/aboutUs'}>About Us</NavLink>
  
@@ -26,12 +26,12 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-6 items-center">
             
               {links}
-            <a
-              href="#"
-              className="ml-4 px-4 py-2 rounded-md bg-black text-white hover:bg-gray-800 transition"
-            >
-              Buy Now
-            </a>
+              <Link
+            to="/sign-up"
+            className="block mt-2 px-4 py-2 text-center rounded-md bg-black text-white hover:bg-gray-800 transition"
+          >
+            Buy Now
+          </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -48,7 +48,7 @@ const Navbar = () => {
 
       {/* Mobile Dropdown Menu */}
       {menuOpen && (
-        <div className="md:hidden bg-white shadow-md px-4 py-3 space-y-2">
+        <div className="md:hidden flex flex-col gap-4 bg-white shadow-md px-4 py-3 space-y-2">
           
           {links}
           <Link
