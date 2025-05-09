@@ -9,14 +9,13 @@ import {
   CheckCircle,
   Users,
 } from "lucide-react";
-import storyImage from "../assets/men1.jpg";
-import storyImages from "../assets/2.svg";
+
 
 const AboutUs = () => {
   return (
-    <div className="bg-gray-100 text-black  md:px-16 py-12  mx-auto space-y-12">
+    <div className="bg-gray-100 text-black  md:px-16 py-6  mx-auto space-y-12">
       {/* Our Story */}
-      <section className="px-6 md:px-16 py-12  mx-auto">
+      <section className="px-6 md:px-16 py-6  mx-auto">
         <h2 className="text-4xl font-bold mb-6 border-b border-gray-400 pb-2 text-black">
           Our Story
         </h2>
@@ -43,7 +42,7 @@ const AboutUs = () => {
           </div>
           <div className="md:w-1/2">
             <img
-              src={storyImage}
+              src='https://i.ibb.co.com/vvwkXGC3/portrait-handsome-confident-stylish-hipster-lambersexual-model-sexy-modern-man-dressed-black-elegant.jpg'
               alt="Royal Attire Story"
               className="rounded-xl shadow-lg w-full object-cover"
             />
@@ -53,10 +52,10 @@ const AboutUs = () => {
 
       {/* Mission & Vision */}
       <section className="py-16 px-6 md:px-16  mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-10">
+        <div className="flex flex-col md:flex-row  gap-10">
           <div className="md:w-1/2">
             <img
-              src={storyImages}
+              src='https://i.ibb.co.com/m5w5kZ73/Screenshot-2025-05-10-002942.png'
               alt="Our Mission and Vision"
               className="rounded-xl shadow-xl w-full h-auto object-cover"
             />
