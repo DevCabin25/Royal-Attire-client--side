@@ -1,25 +1,32 @@
-
 import { Badge, ShoppingBag } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   const { name, price, image, category, isNew, isBestSeller } = product;
 
   return (
-    <div className="group relative hover-scale">
+    <Link
+      to={`/product/${product.id}`}
+      className="group relative hover-scale block"
+    >
       <div className="relative aspect-square overflow-hidden bg-gray-100">
-        <img 
-          src={image} 
-          alt={name} 
+        <img
+          src={image}
+          alt={name}
           className="object-cover w-full h-full transition-transform duration-500 group-hover:scale-105"
         />
-        
+
         {/* Badges */}
         <div className="absolute top-3 left-3 flex flex-col gap-2">
           {isNew && (
-            <Badge className="bg-white text-black font-medium">New Arrival</Badge>
+            <Badge className="bg-white text-black font-medium">
+              New Arrival
+            </Badge>
           )}
           {isBestSeller && (
-            <Badge className="bg-black text-white font-medium">Best Seller</Badge>
+            <Badge className="bg-black text-white font-medium">
+              Best Seller
+            </Badge>
           )}
         </div>
 
@@ -29,7 +36,7 @@ const ProductCard = ({ product }) => {
           <span className="text-sm font-medium">Quick Add</span>
         </div>
       </div>
-      
+
       <div className="mt-4 space-y-1 text-left">
         <div className="flex items-center justify-between">
           <h3 className="font-medium">{name}</h3>
@@ -37,7 +44,7 @@ const ProductCard = ({ product }) => {
         </div>
         <p className="text-sm text-gray-500">{category}</p>
       </div>
-    </div>
+    </Link>
   );
 };
 
