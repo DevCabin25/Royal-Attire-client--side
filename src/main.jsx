@@ -16,6 +16,7 @@ import Register from './Page/Auth/Register.jsx';
 
 import Login from './Page/Auth/Login.jsx';
 import AboutUs from './Page/AboutUs';
+import Guide from './Page/Guide.jsx';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
   {
     path:"/login",
     element:<Login/>
+  },
+  {
+    path:"/guide",
+    element:<Guide/>
   }
 ]
   }
