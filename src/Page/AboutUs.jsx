@@ -9,14 +9,13 @@ import {
   CheckCircle,
   Users,
 } from "lucide-react";
-import storyImage from "../assets/men1.jpg";
-import storyImages from "../assets/2.svg";
+
 
 const AboutUs = () => {
   return (
-    <div className="bg-gray-100 text-black px-6 md:px-16 py-12 max-w-7xl mx-auto space-y-12">
+    <div className="bg-gray-100 text-black  md:px-16 py-6  mx-auto space-y-12">
       {/* Our Story */}
-      <section className="px-6 md:px-16 py-12 max-w-6xl mx-auto">
+      <section className="px-6 md:px-16 py-6  mx-auto">
         <h2 className="text-4xl font-bold mb-6 border-b border-gray-400 pb-2 text-black">
           Our Story
         </h2>
@@ -43,7 +42,7 @@ const AboutUs = () => {
           </div>
           <div className="md:w-1/2">
             <img
-              src={storyImage}
+              src='https://i.ibb.co.com/vvwkXGC3/portrait-handsome-confident-stylish-hipster-lambersexual-model-sexy-modern-man-dressed-black-elegant.jpg'
               alt="Royal Attire Story"
               className="rounded-xl shadow-lg w-full object-cover"
             />
@@ -52,11 +51,11 @@ const AboutUs = () => {
       </section>
 
       {/* Mission & Vision */}
-      <section className="py-16 px-6 md:px-16 max-w-6xl mx-auto">
-        <div className="flex flex-col md:flex-row items-center gap-10">
+      <section className="py-16 px-6 md:px-16  mx-auto">
+        <div className="flex flex-col md:flex-row  gap-10">
           <div className="md:w-1/2">
             <img
-              src={storyImages}
+              src='https://i.ibb.co.com/m5w5kZ73/Screenshot-2025-05-10-002942.png'
               alt="Our Mission and Vision"
               className="rounded-xl shadow-xl w-full h-auto object-cover"
             />
@@ -88,7 +87,7 @@ const AboutUs = () => {
 
       {/* Sustainability */}
       <section className="py-16 px-6 md:px-16">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className=" mx-auto text-center">
           <h2 className="text-4xl font-extrabold mb-8 text-black">
             Sustainability & Materials
           </h2>
@@ -129,7 +128,7 @@ const AboutUs = () => {
 
       {/* Core Values */}
       <section className="bg-gradient-to-br from-gray-100 via-gray-200 to-gray-300 py-20 px-6 md:px-16">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className=" mx-auto text-center">
           <h2 className="text-4xl font-extrabold mb-12 text-black">
             Our Core Values
           </h2>
@@ -179,7 +178,7 @@ const AboutUs = () => {
 
       {/* Our Team */}
       <section className="bg-gray-100 py-16 px-6 md:px-16 text-black">
-        <div className="max-w-6xl mx-auto text-center">
+        <div className=" mx-auto text-center">
           <h2 className="text-4xl font-extrabold mb-6 text-black">Our Team</h2>
           <p className="text-lg text-black mb-4">
             We are a growing collective of designers, stylists, and storytellers
@@ -206,7 +205,7 @@ const AboutUs = () => {
           <h2 className="text-5xl font-bold mb-8 text-black">
             Why Royal Attire?
           </h2>
-          <p className="text-2xl text-black max-w-3xl mx-auto leading-relaxed tracking-wide">
+          <p className="text-2xl text-black  mx-auto leading-relaxed tracking-wide">
             Because you don’t just wear clothes — you wear confidence,
             character, and legacy. At Royal Attire, we believe that style is an
             extension of who you are — not just something you wear.
