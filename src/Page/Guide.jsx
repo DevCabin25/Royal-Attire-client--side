@@ -1,153 +1,201 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
+import { FaHeart, FaSearch, FaRegHeart } from "react-icons/fa";
 
 const Guide = () => {
-  const [activeCategory, setActiveCategory] = useState('seasonal'); // Set default category to 'seasonal'
+  const [activeCategory, setActiveCategory] = useState("seasonal");
+  const [searchQuery, setSearchQuery] = useState("");
+  const [favorites, setFavorites] = useState([]);
 
   const handleCategoryClick = (category) => {
     setActiveCategory(category === activeCategory ? null : category);
   };
 
+  const toggleFavorite = (item) => {
+    setFavorites((prev) =>
+      prev.includes(item) ? prev.filter((fav) => fav !== item) : [...prev, item]
+    );
+  };
+
+  const seasonalData = {
+    summer: {
+      image: "/images/summer-style.jpg",
+      title: "Summer Style",
+      color: "text-blue-700",
+      items: [
+        "Sky Blue Linen Kurta",
+        "Olive Green Polo T-Shirt",
+        "Beige Cotton Chinos",
+      ],
+    },
+    winter: {
+      image: "/images/winter-wear.jpg",
+      title: "Winter Wear",
+      color: "text-blue-700",
+      items: [
+        "Midnight Black Slim-Fit Suit",
+        "Navy Kurta with Jacket Combo",
+        "Black Textured Waistcoat",
+      ],
+    },
+  };
+
+  const occasionData = {
+    everyday: {
+      image: "/images/everyday-essentials.jpg",
+      title: "Everyday Essentials",
+      color: "text-green-700",
+      items: [
+        "Classic White Mandarin Shirt",
+        "Navy Denim Shirt",
+        "Textured Leather Belt",
+      ],
+    },
+    business: {
+      image: "/images/business-formal.jpg",
+      title: "Business & Formal Events",
+      color: "text-green-700",
+      items: [
+        "Midnight Black Suit",
+        "Premium White Formal Shirt",
+        "Classic Gold Cufflinks",
+      ],
+    },
+    // ... other occasion data
+  };
+
   return (
-    <div className="bg-white text-black min-h-screen">
+    <div className="bg-gradient-to-b from-white to-gray-100 min-h-screen">
       <main className="container mx-auto px-4 py-8">
+        {/* Search Bar */}
+        <div className="max-w-md mx-auto mb-8">
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search fashion items..."
+              className="w-full px-4 py-2 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+            />
+            <FaSearch className="absolute right-4 top-3 text-gray-400" />
+          </div>
+        </div>
+
         {/* Category Navigation */}
-        <div className="space-x-4 text-center">
+        <div className="flex justify-center space-x-4 mb-12">
           <button
-            className={`text-lg ${activeCategory === 'seasonal' ? 'bg-black text-white p-2 px-6 rounded-2xl' : ''} text-black font-semibold`}
-            onClick={() => handleCategoryClick('seasonal')}
+            className={`text-lg px-6 py-2 rounded-full transition-all duration-300 ${
+              activeCategory === "seasonal"
+                ? "bg-black text-white shadow-lg"
+                : "bg-white text-black hover:bg-gray-100"
+            }`}
+            onClick={() => handleCategoryClick("seasonal")}
           >
             Seasonal Fashion
           </button>
           <button
-            className={`text-lg ${activeCategory === 'occasion' ? 'bg-black text-white p-2 px-6 rounded-2xl' : ''} font-semibold text-black`}
-            onClick={() => handleCategoryClick('occasion')}
+            className={`text-lg px-6 py-2 rounded-full transition-all duration-300 ${
+              activeCategory === "occasion"
+                ? "bg-black text-white shadow-lg"
+                : "bg-white text-black hover:bg-gray-100"
+            }`}
+            onClick={() => handleCategoryClick("occasion")}
           >
             Occasion-Based Fashion
           </button>
         </div>
 
         {/* Seasonal Fashion Section */}
-        {activeCategory === 'seasonal' && (
+        {activeCategory === "seasonal" && (
           <section className="my-16">
-            <h2 className="text-3xl font-semibold">Seasonal Fashion</h2>
-
-            {/* Summer Style */}
-            <div className="mt-8 p-6 border border-gray-300 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-blue-700">Summer Style</h3>
-              <ul className="list-disc pl-8">
-                <li>Light Fabrics: Cotton, linen, and blends for breathability.</li>
-                <li>Colors to Wear: Pastels, whites, sky blues, beige, mint green.</li>
-                <li>Royal Picks:
-                  <ul className="pl-8">
-                    <li>Sky Blue Linen Kurta</li>
-                    <li>Olive Green Polo T-Shirt</li>
-                    <li>Beige Cotton Chinos</li>
-                  </ul>
-                </li>
-              </ul>
-              <p className="mt-4 text-gray-500">Pro Tip: Roll up your sleeves and pair with loafers or kolhapuri sandals.</p>
-            </div>
-
-            {/* Winter Wear */}
-            <div className="mt-12 p-6 border border-gray-300 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-blue-700">Winter Wear</h3>
-              <ul className="list-disc pl-8">
-                <li>Layering Matters: Wool-blend blazers, waistcoats for warmth.</li>
-                <li>Colors to Wear: Deep maroon, charcoal, navy, forest green.</li>
-                <li>Royal Picks:
-                  <ul className="pl-8">
-                    <li>Midnight Black Slim-Fit Suit</li>
-                    <li>Navy Kurta with Jacket Combo</li>
-                    <li>Black Textured Waistcoat</li>
-                  </ul>
-                </li>
-              </ul>
-              <p className="mt-4 text-gray-500">Pro Tip: Add bold brooches for evening glam.</p>
+            <h2 className="text-4xl font-bold text-center mb-12">
+              Seasonal Fashion
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {Object.entries(seasonalData).map(([key, data]) => (
+                <div
+                  key={key}
+                  className="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+                >
+                  <div className="relative h-48">
+                    <img
+                      src={data.image}
+                      alt={data.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <button
+                      onClick={() => toggleFavorite(data.title)}
+                      className="absolute top-4 right-4 text-white hover:text-red-500 transition-colors"
+                    >
+                      {favorites.includes(data.title) ? (
+                        <FaHeart className="text-red-500" />
+                      ) : (
+                        <FaRegHeart />
+                      )}
+                    </button>
+                  </div>
+                  <div className="p-6">
+                    <h3 className={`text-2xl font-semibold ${data.color}`}>
+                      {data.title}
+                    </h3>
+                    <ul className="mt-4 space-y-2">
+                      {data.items.map((item, index) => (
+                        <li key={index} className="flex items-center space-x-2">
+                          <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
             </div>
           </section>
         )}
 
         {/* Occasion-Based Fashion Section */}
-        {activeCategory === 'occasion' && (
+        {activeCategory === "occasion" && (
           <section className="my-16">
-            <h2 className="text-3xl font-semibold">Occasion-Based Fashion</h2>
-
-            {/* Everyday Essentials */}
-            <div className="mt-8 p-6 border border-gray-300 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-green-700">Everyday Essentials</h3>
-              <ul className="list-disc pl-8">
-                <li>Comfort meets class — polos, slim-fit chinos, and mandarin shirts.</li>
-                <li>Royal Picks:
-                  <ul className="pl-8">
-                    <li>Classic White Mandarin Shirt</li>
-                    <li>Navy Denim Shirt</li>
-                    <li>Textured Leather Belt</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-
-            {/* Business & Formal Events */}
-            <div className="mt-12 p-6 border border-gray-300 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-green-700">Business & Formal Events</h3>
-              <ul className="list-disc pl-8">
-                <li>Dress to lead — structured suits, classic shirts.</li>
-                <li>Royal Picks:
-                  <ul className="pl-8">
-                    <li>Midnight Black Suit</li>
-                    <li>Premium White Formal Shirt</li>
-                    <li>Classic Gold Cufflinks</li>
-                  </ul>
-                </li>
-              </ul>
-              <p className="mt-4 text-gray-500">Style Tip: Never underestimate the power of a perfectly ironed shirt.</p>
-            </div>
-
-            {/* Weddings & Festivals */}
-            <div className="mt-12 p-6 border border-gray-300 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-green-700">Weddings & Festivals</h3>
-              <ul className="list-disc pl-8">
-                <li>Rich textures, embroidered kurtas, and accessories shine.</li>
-                <li>Royal Picks:
-                  <ul className="pl-8">
-                    <li>Maroon Velvet Embroidered Kurta</li>
-                    <li>Ivory Heritage Sherwani</li>
-                    <li>Emerald Green Brooch</li>
-                  </ul>
-                </li>
-              </ul>
-              <p className="mt-4 text-gray-500">Style Tip: Coordinate with event themes or family colors, and never skip your waistcoat!</p>
-            </div>
-
-            {/* Parties & Celebrations */}
-            <div className="mt-12 p-6 border border-gray-300 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-green-700">Parties & Celebrations</h3>
-              <ul className="list-disc pl-8">
-                <li>Sleek and slightly edgy — satin finishes, fitted kurta sets.</li>
-                <li>Royal Picks:
-                  <ul className="pl-8">
-                    <li>Golden Beige Panjabi</li>
-                    <li>Royal Blue Kurta-Jacket Set</li>
-                    <li>Statement Pocket Squares</li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
-
-            {/* Cultural Events */}
-            <div className="mt-12 p-6 border border-gray-300 rounded-lg shadow-lg">
-              <h3 className="text-2xl font-semibold text-green-700">Cultural Events</h3>
-              <ul className="list-disc pl-8">
-                <li>Cultural storytelling through fashion, worn during Eid, Pohela Boishakh, weddings, and religious festivals.</li>
-                <li>Royal Picks:
-                  <ul className="pl-8">
-                    <li>Maroon Embroidered Panjabi</li>
-                    <li>Off-White Cotton Kurta with Red Detailing</li>
-                    <li>Golden Beige Festival Panjabi</li>
-                  </ul>
-                </li>
-              </ul>
-              <p className="mt-4 text-gray-500">Royal Tip: Pair the panjabi with a shawl for evening elegance.</p>
+            <h2 className="text-4xl font-bold text-center mb-12">
+              Occasion-Based Fashion
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {Object.entries(occasionData).map(([key, data]) => (
+                <div
+                  key={key}
+                  className="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
+                >
+                  <div className="relative h-48">
+                    <img
+                      src={data.image}
+                      alt={data.title}
+                      className="w-full h-full object-cover"
+                    />
+                    <button
+                      onClick={() => toggleFavorite(data.title)}
+                      className="absolute top-4 right-4 text-white hover:text-red-500 transition-colors"
+                    >
+                      {favorites.includes(data.title) ? (
+                        <FaHeart className="text-red-500" />
+                      ) : (
+                        <FaRegHeart />
+                      )}
+                    </button>
+                  </div>
+                  <div className="p-6">
+                    <h3 className={`text-2xl font-semibold ${data.color}`}>
+                      {data.title}
+                    </h3>
+                    <ul className="mt-4 space-y-2">
+                      {data.items.map((item, index) => (
+                        <li key={index} className="flex items-center space-x-2">
+                          <span className="w-2 h-2 bg-green-500 rounded-full"></span>
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </div>
+              ))}
             </div>
           </section>
         )}
