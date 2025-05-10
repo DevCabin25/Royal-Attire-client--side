@@ -2,9 +2,8 @@ import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade";
-import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+import { Autoplay, EffectFade, Pagination } from "swiper/modules";
 
 import img1 from "../../assets/1.svg";
 import img2 from "../../assets/2.svg";
@@ -25,8 +24,7 @@ const Banner = () => {
           clickable: true,
           dynamicBullets: true,
         }}
-        navigation={true}
-        modules={[Autoplay, EffectFade, Navigation, Pagination]}
+        modules={[Autoplay, EffectFade, Pagination]}
         className="mySwiper h-[80vh] w-full"
       >
         <SwiperSlide className="relative">

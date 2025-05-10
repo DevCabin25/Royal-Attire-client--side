@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
 import { FaHeart, FaSearch, FaRegHeart } from "react-icons/fa";
 
 const Guide = () => {
@@ -83,9 +82,7 @@ const Guide = () => {
 
         {/* Category Navigation */}
         <div className="flex justify-center space-x-4 mb-12">
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          <button
             className={`text-lg px-6 py-2 rounded-full transition-all duration-300 ${
               activeCategory === "seasonal"
                 ? "bg-black text-white shadow-lg"
@@ -94,10 +91,8 @@ const Guide = () => {
             onClick={() => handleCategoryClick("seasonal")}
           >
             Seasonal Fashion
-          </motion.button>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
+          </button>
+          <button
             className={`text-lg px-6 py-2 rounded-full transition-all duration-300 ${
               activeCategory === "occasion"
                 ? "bg-black text-white shadow-lg"
@@ -106,25 +101,20 @@ const Guide = () => {
             onClick={() => handleCategoryClick("occasion")}
           >
             Occasion-Based Fashion
-          </motion.button>
+          </button>
         </div>
 
         {/* Seasonal Fashion Section */}
         {activeCategory === "seasonal" && (
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="my-16"
-          >
+          <section className="my-16">
             <h2 className="text-4xl font-bold text-center mb-12">
               Seasonal Fashion
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {Object.entries(seasonalData).map(([key, data]) => (
-                <motion.div
+                <div
                   key={key}
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-white rounded-xl shadow-xl overflow-hidden"
+                  className="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
                 >
                   <div className="relative h-48">
                     <img
@@ -156,28 +146,23 @@ const Guide = () => {
                       ))}
                     </ul>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.section>
+          </section>
         )}
 
         {/* Occasion-Based Fashion Section */}
         {activeCategory === "occasion" && (
-          <motion.section
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="my-16"
-          >
+          <section className="my-16">
             <h2 className="text-4xl font-bold text-center mb-12">
               Occasion-Based Fashion
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {Object.entries(occasionData).map(([key, data]) => (
-                <motion.div
+                <div
                   key={key}
-                  whileHover={{ scale: 1.02 }}
-                  className="bg-white rounded-xl shadow-xl overflow-hidden"
+                  className="bg-white rounded-xl shadow-xl overflow-hidden hover:shadow-2xl transition-shadow duration-300"
                 >
                   <div className="relative h-48">
                     <img
@@ -209,10 +194,10 @@ const Guide = () => {
                       ))}
                     </ul>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
-          </motion.section>
+          </section>
         )}
       </main>
     </div>
