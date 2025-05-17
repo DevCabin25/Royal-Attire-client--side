@@ -15,6 +15,7 @@ import Login from "./Page/Auth/Login.jsx";
 import AboutUs from "./Page/AboutUs";
 import Guide from "./Page/Guide.jsx";
 import ProductDetails from "./Page/ProductDetails.jsx";
+import AuthProvider from "./Context/AuthProvider.jsx";
 
 const router = createBrowserRouter([
   {
@@ -58,6 +59,8 @@ const router = createBrowserRouter([
 ]);
 createRoot(document.getElementById("root")).render(
   <StrictMode>
+     <AuthProvider>
     <RouterProvider router={router} />
+    </AuthProvider>
   </StrictMode>
 );
