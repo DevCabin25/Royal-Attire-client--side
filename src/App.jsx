@@ -1,12 +1,17 @@
-import React from 'react';
+import React from "react";
+import "./App.css";
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <h1 className='text-red-600 font-bold'>this is our new website </h1>
-      
+
+    <div className="text-center text-xl font-bold mt-10">
+      Welcome to Royal Attire!
+
+
     </div>
   );
-};
+}
+
 
 export default App;
+
